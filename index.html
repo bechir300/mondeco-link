@@ -21,31 +21,85 @@
     }
   </script>
   <style>
-    :root { --brand:#0e1013; --brand-2:#1b1f24; --accent:#ff4d4f; }
-    /* Background with subtle Mondeco logo pattern */
-    body {
-      background-image:
-        radial-gradient(ellipse at top left, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 45%),
-        radial-gradient(ellipse at bottom right, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 50%),
-        url('bg-logo-mondeco.png'); /* put a transparent watermark logo file next to index.html */
-      background-size: 100% 100%, 100% 100%, 180px auto;
-      background-repeat: no-repeat, no-repeat, repeat;
-      background-position: center, center, center;
-    }
-    .glass { background: rgba(16,17,19,0.6); backdrop-filter: blur(10px); }
-    .btn { width:100%; padding:.75rem; border-radius:1rem; font-weight:600; box-shadow: 0 4px 16px rgba(0,0,0,.15); transition:.2s; display:flex; align-items:center; justify-content:center; gap:.5rem}
-    .btn:hover{ box-shadow:0 6px 20px rgba(0,0,0,.25) }
-    .btn-primary { background:#fff; color:#0e1013; }
-    .btn-dark { background:#1b1f24; color:#fff; }
-    .card { border-radius:1.5rem; padding:1.25rem; border:1px solid rgba(255,255,255,.08) }
-    @media (max-width: 390px) {
-      main { padding-left: 14px; padding-right: 14px; }
-      header img { width: 52px; height: 52px; }
-      h1 { font-size: 1.35rem; }
-      #qrcode canvas { width: 96px !important; height: 96px !important; }
-    }
-    .safe { padding-bottom: calc(env(safe-area-inset-bottom) + 24px); }
-  </style>
+  :root {
+    --bg1:#0b0d10; --bg2:#151922; --panel:#0f1217; --ink:#e9eef5;
+    --muted: rgba(233,238,245,.65);
+    --ring: rgba(255,255,255,.08);
+    --brand:#ff4d4f;
+  }
+
+  /* Fond: dégradé animé + watermark du logo */
+  body{
+    color: var(--ink);
+    background:
+      radial-gradient(1200px 600px at -10% -30%, rgba(255,255,255,.05), transparent 60%),
+      radial-gradient(1200px 600px at 110% 130%, rgba(255,255,255,.05), transparent 60%),
+      url('bg-logo-mondeco.png');
+    background-size: 100% 100%, 100% 100%, 180px auto;
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-position: center, center, center;
+    class="min-h-screen text-white bg-anim"
+  }
+  /* halo animé (separate layer pour performance) */
+  .bg-anim::before{
+    content:""; position:fixed; inset:-20%;
+    background: radial-gradient(600px 300px at 20% 10%, rgba(255,77,79,.12), transparent 60%),
+                radial-gradient(500px 260px at 80% 90%, rgba(82,186,255,.10), transparent 60%);
+    filter: blur(20px);
+    animation: float 16s ease-in-out infinite alternate;
+    pointer-events:none; z-index:-1;
+  }
+  @keyframes float{
+    0%{ transform: translateY(-10px) }
+    100%{ transform: translateY(10px) }
+  }
+
+  /* Carte “glass” premium */
+  .card{
+    background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
+    border: 1px solid var(--ring);
+    border-radius: 20px; padding: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.35);
+    backdrop-filter: blur(10px);
+  }
+
+  /* Header compact */
+  .brand-logo{ width:64px; height:64px; border-radius:16px; background:rgba(255,255,255,.06); padding:6px; border:1px solid var(--ring)}
+  .brand-title{ font-weight:800; letter-spacing:.2px }
+  .brand-sub{ color:var(--muted); font-size:.9rem }
+
+  /* Boutons premium */
+  .btn{
+    width:100%; padding:.9rem 1rem; border-radius:14px; font-weight:700;
+    display:flex; align-items:center; justify-content:center; gap:.6rem;
+    border:1px solid var(--ring); background: #0f1319; color:var(--ink);
+    box-shadow: 0 6px 20px rgba(0,0,0,.22);
+    transition: transform .12s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+  }
+  .btn-light{ background:#ffffff; color:#0e1013; }
+  .btn:hover{ transform: translateY(-1px); box-shadow: 0 12px 28px rgba(0,0,0,.28); border-color: rgba(255,255,255,.16) }
+  .btn:active{ transform: translateY(0) scale(.995) }
+
+  /* Séparateur titre de section */
+  .section-title{
+    margin: 10px 0 6px; font-weight:800; opacity:.9; font-size:.92rem; letter-spacing:.4px;
+    text-transform: uppercase;
+  }
+
+  /* Lien discret sous carte */
+  .fine{ color: var(--muted); font-size:.78rem }
+
+  /* QR */
+  #qrcode{ background:#fff; border-radius:12px; padding:8px; border:1px solid rgba(0,0,0,.08) }
+
+  /* Mobile tweaks */
+  @media (max-width: 420px){
+    .brand-logo{ width:56px; height:56px }
+    .brand-title{ font-size:1.25rem }
+    #qrcode canvas{ width:96px !important; height:96px !important }
+  }
+</style>
+
   <!-- Open Graph -->
   <meta property="og:title" content="Mondeco – Tous nos liens" />
   <meta property="og:description" content="Suivez-nous, visitez notre site, appelez-nous, en un scan." />
