@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mondeco – Tous nos liens</title>
+  <meta name="description" content="Tous les liens officiels de Mondeco.tn : Instagram, Facebook, TikTok, Site Web, Appels, WhatsApp, localisation et vCard." />
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#101113">
+  <link rel="icon" href="/icons/icon-192.png" />
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --brand:#0e1013; --brand-2:#1b1f24; --accent:#ff4d4f; }
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(10px); }
+    .btn { @apply w-full py-3 rounded-2xl font-medium shadow hover:shadow-lg transition; }
+    .btn-primary { background: white; color: #0e1013; }
+    .btn-dark { background: #1b1f24; color: white; }
+  </style>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mondeco – Tous nos liens" />
+  <meta property="og:description" content="Suivez-nous, visitez notre site, appelez-nous, en un scan." />
+  <meta property="og:image" content="/og-cover.jpg" />
+  <meta property="og:type" content="website" />
+  <!-- GA4 (remplacez G-XXXXXXXXXX) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+</head>
+<body class="min-h-screen bg-[linear-gradient(135deg,#0e1013,#1b1f24)] text-white">
+  <main class="max-w-md mx-auto px-5 pt-10 pb-24">
+    <!-- Brand header -->
+    <header class="flex items-center gap-4 mb-6">
+      <img src="/mondeco-linkhub/logo-mondeco.png" alt="Mondeco" class="w-14 h-14 rounded-xl ring-1 ring-white/10" />
+      <div>
+        <h1 class="text-2xl font-bold tracking-tight">Mondeco</h1>
+        <p class="text-white/70 text-sm">Showrooms & e‑commerce meubles en Tunisie</p>
+      </div>
+    </header>
+
+    <!-- Card -->
+    <section class="glass rounded-3xl p-5 ring-1 ring-white/10">
+      <!-- QR code -->
+      <div class="flex items-center gap-4">
+        <div id="qrcode" class="bg-white rounded-xl p-2"></div>
+        <div class="text-sm text-white/80">
+          <p>Scannez pour ouvrir cette page sur votre téléphone.</p>
+          <button id="dlQR" class="mt-2 btn btn-primary text-sm">Télécharger le QR</button>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="mt-6 space-y-3">
+        <!-- Remplacez les href avec vos vrais liens -->
+        <a data-label="Instagram" class="btn btn-primary flex items-center justify-center gap-2" href="https://www.instagram.com/mondeco.tn/?utm_source=qr&utm_medium=linkhub&utm_campaign=qr_hub" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/></svg>
+          Instagram
+        </a>
+        <a data-label="Facebook" class="btn btn-dark flex items-center justify-center gap-2" href="https://www.facebook.com/mondeco.tn?utm_source=qr&utm_medium=linkhub&utm_campaign=qr_hub" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2h-3a5 5 0 0 0-5 5v3H6v4h3v8z"/></svg>
+          Facebook
+        </a>
+        <a data-label="TikTok" class="btn btn-primary flex items-center justify-center gap-2" href="https://www.tiktok.com/@bechir_mondeco?utm_source=qr&utm_medium=linkhub&utm_campaign=qr_hub" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c1 2 2 3 4 3v4c-2 0-3-.6-4-1.6V15a6 6 0 1 1-6-6h1v4h-1a2 2 0 1 0 2 2V3z"/></svg>
+          TikTok
+        </a>
+        <a data-label="Site Web" class="btn btn-dark flex items-center justify-center gap-2" href="https://mondeco.tn/?utm_source=qr&utm_medium=linkhub&utm_campaign=qr_hub" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1 3.1A7.98 7.98 0 0 0 6.2 10H11V5.1zM13 5.1V10h4.8A7.98 7.98 0 0 0 13 5.1zM6.2 14A7.98 7.98 0 0 0 11 18.9V14H6.2zM13 18.9A7.98 7.98 0 0 0 17.8 14H13v4.9z"/></svg>
+          Site Web
+        </a>
+        <!-- Téléphone(s) -->
+        <a data-label="Appeler Soukra" class="btn btn-primary" href="tel:+21600000000">Appeler Soukra</a>
+        <a data-label="Appeler Nabeul" class="btn btn-primary" href="tel:+21600000001">Appeler Nabeul</a>
+        <a data-label="WhatsApp" class="btn btn-dark" href="https://wa.me/21600000000?text=Bonjour%20Mondeco" target="_blank" rel="noopener">WhatsApp</a>
+        <!-- Localisation & vCard -->
+        <a data-label="Google Maps" class="btn btn-primary" target="_blank" rel="noopener" href="https://maps.google.com/?q=Mondeco%20Showroom%20Soukra">Nous trouver (Google Maps)</a>
+        <a data-label="vCard" class="btn btn-dark" download href="/mondeco.vcf">Enregistrer le contact (vCard)</a>
+      </div>
+
+      <!-- Fine print -->
+      <p class="mt-5 text-[12px] text-white/50">© Mondeco.tn • Tous droits réservés</p>
+    </section>
+  </main>
+
+  <!-- QR generator (QRCode.js CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-iEXsx6WQbPj8m7fVbQpO2T2Q4+6zjzYwG3lB5Cq2wK6kY1YVt2pJv5l0hC2fQ3x+3s0o2f8m6zZcQ2l2cQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    // Génère un QR de l'URL actuelle
+    const url = window.location.href;
+    const qrelem = document.getElementById('qrcode');
+    const qrcode = new QRCode(qrelem, { text: url, width: 120, height: 120, correctLevel: QRCode.CorrectLevel.H });
+
+    // Téléchargement du QR en PNG
+    document.getElementById('dlQR').addEventListener('click', () => {
+      const canvas = qrelem.querySelector('canvas');
+      const a = document.createElement('a');
+      a.href = canvas.toDataURL('image/png');
+      a.download = 'qr-mondeco.png';
+      a.click();
+    });
+
+    // Tracking de clics sur les boutons (GA4)
+    const links = document.querySelectorAll('a[data-label]');
+    links.forEach(a => {
+      a.addEventListener('click', () => {
+        const label = a.getAttribute('data-label');
+        gtag('event', 'link_click', { event_category: 'linkhub', event_label: label });
+      });
+    });
+  </script>
+
+  <!-- PWA service worker (optionnel) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(console.error);
+      });
+    }
+  </script>
+</body>
+</html>
+
+<!-- manifest.webmanifest (placer à la racine) -->
+<!--
+{
+  "name": "Mondeco – Tous nos liens",
+  "short_name": "Mondeco Links",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#101113",
+  "theme_color": "#101113",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
+-->
+
+<!-- sw.js (cache basique pour vitesse hors-ligne) -->
+<!--
+const CACHE = 'mondeco-linkhub-v1';
+const ASSETS = [
+  '/', '/index.html', '/logo-mondeco.png', '/icons/icon-192.png', '/icons/icon-512.png', '/mondeco.vcf',
+  'https://cdn.tailwindcss.com',
+  'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js'
+];
+self.addEventListener('install', e => {
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
+});
+self.addEventListener('fetch', e => {
+  e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
+});
+-->

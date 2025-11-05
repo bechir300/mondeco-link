@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Mondeco;;;
+FN:Mondeco Tunisie
+ORG:Mondeco - Meubles & Décoration
+TITLE:Showroom principal
+TEL;TYPE=WORK,VOICE:+216 29 055 512
+TEL;TYPE=WORK,VOICE:+216 29 055 520
+EMAIL;TYPE=WORK:contact@mondeco.tn
+ADR;TYPE=WORK:;;Tunisie;;;
+URL;TYPE=WORK:https://mondeco.tn/
+LOGO;VALUE=URI:https://mondeco.tn/wp-content/uploads/2025/05/logo-mondeco.png
+NOTE:Tous vos liens Mondeco en un clic : Instagram, Facebook, TikTok, site web, contact direct.
+END:VCARD
